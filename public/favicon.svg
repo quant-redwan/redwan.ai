@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <!-- Dark mode gradient -->
+    <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#6d4aff"/>
+    </linearGradient>
+
+    <!-- Light mode gradient -->
+    <linearGradient id="grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d4aff"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+
+    <!-- Dark background -->
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #0c0c0e; }
+        .border-ring { stroke: #3a3a50; }
+        .letter { fill: url(#grad-dark); }
+        .dot { fill: #a78bfa; }
+      }
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #f5f3ee; }
+        .border-ring { stroke: #d4d0e8; }
+        .letter { fill: url(#grad-light); }
+        .dot { fill: #6d4aff; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="8" class="bg"/>
+
+  <!-- Border ring -->
+  <rect x="1" y="1" width="30" height="30" rx="7.5" class="border-ring" stroke-width="0.75" fill="none"/>
+
+  <!-- Letter R — geometric, clean -->
+  <text
+    x="5"
+    y="24"
+    font-family="'DM Serif Display', 'Georgia', serif"
+    font-size="22"
+    font-weight="400"
+    class="letter"
+  >R</text>
+
+  <!-- Accent dot — bottom right -->
+  <circle cx="26" cy="25" r="2.5" class="dot"/>
+</svg>
